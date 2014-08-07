@@ -1,0 +1,92 @@
+/*
+ * This is the stylesheet manifest file for the front subsite (which
+ * is your whole application if you don't have any subsites).  Files
+ * or plugins referenced from here or placed in the front/ directory
+ * will be included.
+ *
+ *= require_self
+ *= require application
+ *= require hobo_rapid
+ *= require hobo_jquery
+ *= require hobo_jquery_ui
+ *= require hobo_bootstrap_ui
+ *= require jquery-ui/redmond
+ *= require hobo_data_tables
+ *= require_tree ./front
+*/
+@import "bootswatch/flatly/variables";
+@import "hobo_bootstrap";
+@import "bootswatch/flatly/bootswatch";
+
+.span3 input, .span3 textarea {
+  width: 100px;
+}
+
+.well {
+  min-height: 20px;
+  padding: 5px;
+  margin-bottom: 20px;
+  background-color: #ECF0F1;
+  border-radius: 6px;
+}
+h5 {
+  font-size: 18px;
+  margin-top: 10px;
+  margin-bottom: 1px;
+  font-weight: 500;
+}
+h2 {
+  padding-bottom: 10px;
+}
+table {
+  width: 100%;
+  border: solid thin;
+}
+th {
+  text-align: left;
+  border: solid thin;
+  background-color: #ECF0F1;
+}
+div.card.well.group-membership {
+  padding: 0px;
+}
+form.form-horizontal.button_to {
+  height: 20px;
+  padding: 0px;
+  margin-top: 5;
+}
+
+input.btn.button.delete-button.delete-group-membership-button {
+  height: 20px;
+  width: 30px;
+  font-size: 10px;
+  margin-top: 0px;
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
+.dev-user-changer {
+  margin-top: 4px;
+}
+a.btn.pull-right.btn-primary.new-link.new-group-link {
+  margin-top: 5px;
+}
+a.btn.pull-right.edit-link.group-link {
+  margin-top: 18px;
+  margin-right: 10px;
+}
+a.btn.pull-right.edit-link.target-link {
+  margin-top: 28px;
+  margin-right: 20px;
+}
+a.btn.pull-right.edit-link.user-link {
+  margin-top: 12px;
+  margin-right: 10px;
+}
+a.btn.pull-right.edit-link.trial-link {
+  margin-top: 28px;
+  margin-right: 20px;
+}
+
+.field-heading-row {
+  background-color: #ECF0F1;
+}
