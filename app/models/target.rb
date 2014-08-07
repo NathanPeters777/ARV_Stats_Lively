@@ -4,18 +4,12 @@ class Target < ActiveRecord::Base
 
   fields do
     name                   :string
-    due_date               :date
     prompt_or_cue          :text
     outcome1               :string
     outcome2               :string
+    coordinate             :string
     final_outcome          :string
     group_prediction       :string
-    confidence_level       :float
-    cr_divergence          :float
-    trials_cr_delta_mean   :float
-    trials_cr_delta_stddev :float
-    trials_cr_delta_snr    :string
-    trials_zscore          :float
     timestamps
   end
   attr_accessible :name, :due_date, :prompt_or_cue, :outcome1, :outcome2, :final_outcome, :group_prediction, :confidence_level, :cr_divergence, :trials_cr_delta_mean, :trials_cr_delta_stddev, :trials_cr_delta_snr, :trials_zscore

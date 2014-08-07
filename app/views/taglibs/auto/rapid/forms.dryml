@@ -16,7 +16,7 @@
 <def tag="form" for="Group">
   <form merge param="default">
     <error-messages param/>
-    <field-list fields="owner" param/>
+    <field-list fields="name, description, owner" param/>
     <div param="actions">
       <submit label="#{ht 'group.actions.save', :default=>['Save']}" param/><or-cancel param="cancel"/>
     </div>
@@ -28,7 +28,7 @@
 <def tag="form" for="Target">
   <form merge param="default">
     <error-messages param/>
-    <field-list fields="group, owner" param/>
+    <field-list fields="name, prompt_or_cue, outcome1, outcome2, coordinate, final_outcome, group_prediction, group, owner" param/>
     <div param="actions">
       <submit label="#{ht 'target.actions.save', :default=>['Save']}" param/><or-cancel param="cancel"/>
     </div>
@@ -40,7 +40,7 @@
 <def tag="form" for="Trial">
   <form merge param="default">
     <error-messages param/>
-    <field-list fields="owner, target, user" param/>
+    <field-list fields="transcript_as_text, owner, target, user" param/>
     <div param="actions">
       <submit label="#{ht 'trial.actions.save', :default=>['Save']}" param/><or-cancel param="cancel"/>
     </div>
@@ -52,7 +52,7 @@
 <def tag="form" for="User">
   <form merge param="default">
     <error-messages param/>
-    <field-list fields="" param/>
+    <field-list fields="name, email_address, administrator, projectmanager, state" param/>
     <div param="actions">
       <submit label="#{ht 'user.actions.save', :default=>['Save']}" param/><or-cancel param="cancel"/>
     </div>

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140801190901) do
+ActiveRecord::Schema.define(version: 20140807185926) do
 
   create_table "group_memberships", force: true do |t|
     t.datetime "created_at"
@@ -38,38 +38,25 @@ ActiveRecord::Schema.define(version: 20140801190901) do
     t.string   "outcome2"
     t.string   "final_outcome"
     t.string   "group_prediction"
-    t.float    "confidence_level"
-    t.float    "cr_divergence"
-    t.float    "trials_cr_delta_mean"
-    t.float    "trials_cr_delta_stddev"
-    t.string   "trials_cr_delta_snr"
-    t.float    "trials_zscore"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "group_id"
     t.integer  "owner_id"
     t.string   "name"
-    t.date     "due_date"
     t.text     "prompt_or_cue"
+    t.string   "coordinate"
   end
 
   add_index "targets", ["group_id"], name: "index_targets_on_group_id"
   add_index "targets", ["owner_id"], name: "index_targets_on_owner_id"
 
   create_table "trials", force: true do |t|
-    t.string   "trn1"
-    t.string   "trn2"
-    t.float    "cr1"
-    t.float    "cr2"
-    t.integer  "solar_wind_speed"
-    t.datetime "viewer_local_time"
-    t.datetime "lst_time"
-    t.string   "user_prediction"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "target_id"
     t.integer  "user_id"
     t.integer  "owner_id"
+    t.text     "transcript_as_text"
   end
 
   add_index "trials", ["owner_id"], name: "index_trials_on_owner_id"
