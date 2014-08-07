@@ -41,6 +41,10 @@ end
 # Load meta-request gem in development mode for RailsPanel Chrome extension
 gem "meta_request", group: :development
 
+# Paperclip support for Hobo
+gem 'paperclip'
+gem 'hobo_paperclip', :git => "git://github.com/Hobo/hobo_paperclip.git", :branch => "master"
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 

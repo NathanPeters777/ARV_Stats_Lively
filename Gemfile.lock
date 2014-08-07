@@ -6,6 +6,15 @@ GIT
       hobo (> 1.4.0.pre5)
       jquery-datatables-rails
 
+GIT
+  remote: git://github.com/Hobo/hobo_paperclip.git
+  revision: abb4e77b849e78be9f1594b7304b71dc5a76157d
+  branch: master
+  specs:
+    hobo_paperclip (0.0.4)
+      hobo
+      paperclip
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -42,6 +51,10 @@ GEM
       railties (>= 3.1)
     builder (3.1.4)
     callsite (0.0.11)
+    climate_control (0.0.3)
+      activesupport (>= 3.0)
+    cocaine (0.5.4)
+      climate_control (>= 0.0.3, < 1.0)
     coffee-rails (4.0.1)
       coffee-script (>= 2.2.0)
       railties (>= 4.0.0, < 5.0)
@@ -115,6 +128,11 @@ GEM
     minitest (4.7.5)
     multi_json (1.10.1)
     multi_xml (0.5.5)
+    paperclip (4.2.0)
+      activemodel (>= 3.0.0)
+      activesupport (>= 3.0.0)
+      cocaine (~> 0.5.3)
+      mime-types
     polyglot (0.3.5)
     protected_attributes (1.0.8)
       activemodel (>= 4.0.1, < 5.0)
@@ -186,12 +204,14 @@ DEPENDENCIES
   hobo_clean_admin (= 2.1.0)
   hobo_data_tables!
   hobo_jquery_ui (= 2.1.0)
+  hobo_paperclip!
   hobo_will_paginate
   jbuilder (~> 1.2)
   jquery-datatables-rails (~> 2.1.10.0.4)
   jquery-rails
   jquery-ui-themes (~> 0.0.4)
   meta_request
+  paperclip
   protected_attributes
   quiet_assets
   rails (= 4.0.5)
