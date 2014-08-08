@@ -28,4 +28,7 @@ ARVStats::Application.configure do
   # This option may cause significant delays in view rendering with a large
   # number of complex assets.
   config.assets.debug = true
+
+  # Local path to ImageMagick for Paperclip
+  Paperclip.options[:command_path] = "/C/Program Files/ImageMagick-6.8.9-Q16"
 end

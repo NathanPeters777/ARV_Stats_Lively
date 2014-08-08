@@ -12,7 +12,7 @@ class Target < ActiveRecord::Base
     group_prediction       :string
     timestamps
   end
-  attr_accessible :name, :due_date, :prompt_or_cue, :outcome1, :outcome2, :final_outcome, :group_prediction, :confidence_level, :cr_divergence, :trials_cr_delta_mean, :trials_cr_delta_stddev, :trials_cr_delta_snr, :trials_zscore
+  attr_accessible :name, :prompt_or_cue, :outcome1, :outcome2, :outcome1_photo, :outcome2_photo, :coordinate, :final_outcome, :group_prediction
 
   belongs_to :owner, :class_name => "User", :creator => true, :inverse_of => :targets
 
@@ -21,6 +21,11 @@ class Target < ActiveRecord::Base
   has_many :trials, :dependent => :destroy, :inverse_of => :target
 
   children :trials
+
+  has_attached_file :outcome1_photo
+  validates_attachment_content_type :outcome1_photo, :content_type => ["image/jpg", "image/jpeg", "image/png", "image/gif"]
+  has_attached_file :outcome2_photo
+  validates_attachment_content_type :outcome2_photo, :content_type => ["image/jpg", "image/jpeg", "image/png", "image/gif"]
 
   # --- Permissions --- #
 

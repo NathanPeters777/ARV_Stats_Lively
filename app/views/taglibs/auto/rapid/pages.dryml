@@ -346,7 +346,7 @@
     </content-header:>
 
     <content-body: param>
-      <field-list fields="prompt_or_cue, outcome1, outcome2, coordinate, final_outcome, group_prediction" param/>
+      <field-list fields="prompt_or_cue, outcome1, outcome2, coordinate, final_outcome, group_prediction, outcome1_photo_file_name, outcome1_photo_content_type, outcome1_photo_file_size, outcome1_photo_updated_at, outcome2_photo_file_name, outcome2_photo_content_type, outcome2_photo_file_size, outcome2_photo_updated_at" param/>
       <section param="collection-section">
         <h3 param="collection-heading">
           <ht key="trial.collection.heading" count="&this.trials.count" >

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140807185926) do
+ActiveRecord::Schema.define(version: 20140807191624) do
 
   create_table "group_memberships", force: true do |t|
     t.datetime "created_at"
@@ -45,6 +45,14 @@ ActiveRecord::Schema.define(version: 20140807185926) do
     t.string   "name"
     t.text     "prompt_or_cue"
     t.string   "coordinate"
+    t.string   "outcome1_photo_file_name"
+    t.string   "outcome1_photo_content_type"
+    t.integer  "outcome1_photo_file_size"
+    t.datetime "outcome1_photo_updated_at"
+    t.string   "outcome2_photo_file_name"
+    t.string   "outcome2_photo_content_type"
+    t.integer  "outcome2_photo_file_size"
+    t.datetime "outcome2_photo_updated_at"
   end
 
   add_index "targets", ["group_id"], name: "index_targets_on_group_id"

@@ -8,6 +8,8 @@ Bundler.require(*Rails.groups)
 
 module ARVStats
   class Application < Rails::Application
+    # Set application name
+    config.hobo.app_name = "Lively ARV"
     # Hobo: the admin subsite loads admin.css & admin.js
     config.assets.precompile += %w(admin.css admin.js)
     # Hobo: Named routes have changed in Hobo 2.0.   Set to false to emit both the 2.0 and 1.3 names.

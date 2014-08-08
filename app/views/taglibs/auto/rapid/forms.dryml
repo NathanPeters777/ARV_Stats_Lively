@@ -28,7 +28,7 @@
 <def tag="form" for="Target">
   <form merge param="default">
     <error-messages param/>
-    <field-list fields="name, prompt_or_cue, outcome1, outcome2, coordinate, final_outcome, group_prediction, group, owner" param/>
+    <field-list fields="name, prompt_or_cue, outcome1, outcome2, coordinate, final_outcome, group_prediction, outcome1_photo_file_name, outcome1_photo_content_type, outcome1_photo_file_size, outcome1_photo_updated_at, outcome2_photo_file_name, outcome2_photo_content_type, outcome2_photo_file_size, outcome2_photo_updated_at, group, owner" param/>
     <div param="actions">
       <submit label="#{ht 'target.actions.save', :default=>['Save']}" param/><or-cancel param="cancel"/>
     </div>
